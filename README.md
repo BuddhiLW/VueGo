@@ -22,3 +22,19 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+## How to setup github pages (already done in this project)
+
+Build:
+```
+yarn build
+```
+
+Push build to repository (even if in .gitignore)
+```
+git add -f ./dist
+```
+
+Add github dist as the origin where gh-pages look for rendering assets.
+```
+git subtree push --prefix dist origin gh-pages
+```
